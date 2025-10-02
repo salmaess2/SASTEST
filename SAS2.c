@@ -86,7 +86,7 @@ void modifierProfil()
 {
     printf("\nentrer le nouveau nom:\n");
     scanf("%s", client.nom);
-    printf("entrer le nouveau prenom");
+    printf("entrer le nouveau prenom:\n");
     scanf("%s", client.prenom);
 }
 void afficherProfil()
@@ -96,7 +96,7 @@ void afficherProfil()
     printf("nom: %s\n", client.nom);
     printf("prenom: %s\n", client.prenom);
     printf("email: %s.%s@client.com\n", client.nom, client.prenom);
-    printf("solde: %fDH\n", client.solde);
+    printf("solde: %.2fDH\n", client.solde);
 }
 // gestion solde
 void afficherSolde()
@@ -107,8 +107,8 @@ void afficherSolde()
 }
 void depotArgent()
 {
-    printf("saisir le solde");
-    scanf("%f", &client.solde);
+    printf("saisir le solde:\n");
+    scanf("%.2f", &client.solde);
 }
 
 //Les produits
@@ -120,7 +120,7 @@ void afficherCatalogue(){
 int rechercherProduit_Nom(){
   char produitRech[50];
   int found =0, i;
-  printf("saisir le produit que vous rechercher: ");
+  printf("saisir le produit que vous rechercher:\n ");
   scanf("%s",&produitRech);
   for(i=0; i<4; i++){
     if(!strcmp(produitRech,listP[i].nom))
